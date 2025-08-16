@@ -1,0 +1,46 @@
+.chevron-icon {
+  transition: transform 0.3s;
+}
+
+.chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+.custom-h1 {
+  font-size: 2.5rem !important;
+}
+
+.custom-h2 {
+  font-size: 1.5rem !important;
+}
+
+.extension-root,
+.extensions-root {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+.extension-root {
+  gap: 1rem;
+}
+
+.extensions-root {
+  box-sizing: border-box;
+  gap: 0.5rem;
+  overflow-x: hidden;
+  padding: 0.5rem 0;
+}
+
+.extension-link {
+  justify-content: flex-start;
+}
+
+.extension-link span {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 40px;
+  text-align: left;
+  width: 100%;
+}
