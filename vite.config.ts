@@ -14,9 +14,9 @@ export default defineConfig({
     coverage: {
       exclude: [
         "**/*.d.ts",
+        "dist/**",
         "src/reportWebVitals.ts",
-        "eslint.config.ts",
-        "vite.config.ts",
+        "**.config.ts",
       ],
       provider: "v8",
     },

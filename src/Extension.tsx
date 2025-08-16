@@ -8,7 +8,7 @@ import "./styles.css";
 function Extension(props: ExtensionProps) {
   return (
     <Box class="extension-root">
-      <Typography class="custom-h1" variant="h1">
+      <Typography class="custom-h1" variant="h1" color="text.primary">
         {props.extensionName}
       </Typography>
       {props.config && <Configuration config={props.config} />}

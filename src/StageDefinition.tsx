@@ -17,7 +17,7 @@ function StageDefinition(props: StageDefinitionProps) {
 
   return (
     <div>
-      <Typography class="custom-h2" variant="h2">
+      <Typography class="custom-h2" variant="h2" color="text.primary">
         Stage Definitions
       </Typography>
       <TableContainer>
