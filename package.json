@@ -15,14 +15,14 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@suid/icons-material": "*",
-    "@suid/material": "*",
-    "solid-js": "*",
+    "@suid/icons-material": "^0.9.0",
+    "@suid/material": "^0.19.0",
+    "solid-js": "^1.9.9",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
     "@solidjs/testing-library": "^0.8.10",
-    "@suid/vite-plugin": "*",
+    "@suid/vite-plugin": "^0.4.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.7.0",
     "@testing-library/user-event": "^14.6.1",
@@ -37,7 +37,7 @@
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.1",
     "vite": "^6.3.5",
-    "vite-plugin-solid": "*",
+    "vite-plugin-solid": "^2.11.8",
     "vitest": "^3.2.4"
   }
 }
