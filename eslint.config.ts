@@ -1,4 +1,3 @@
-import js from "@eslint/js";
 import solidPlugin from "eslint-plugin-solid";
 import { globalIgnores } from "eslint/config";
 import globals from "globals";
@@ -9,7 +8,6 @@ export default tseslint.config([
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
-      js.configs.recommended,
       tseslint.configs.recommended,
       solidPlugin.configs["flat/typescript"],
     ],
