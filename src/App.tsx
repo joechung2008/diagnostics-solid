@@ -91,7 +91,14 @@ function App() {
   };
 
   return (
-    <>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "0.25rem",
+        height: "100vh",
+      }}
+    >
       <Toolbar>
         <Button variant="contained" onClick={handleMenuOpen}>
           {environments.find((env) => env.selected())?.text ??
@@ -168,14 +175,20 @@ function App() {
       </ButtonGroup>
       <Show when={diagnostics()}>
         <Show when={selectedTab() === "extensions"}>
-          <Box sx={{ padding: "10px", display: "flex", gap: "1rem" }}>
-            <Box>
+          <Box sx={{ boxSizing: "border-box", flex: "1", overflowY: "auto" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "nowrap",
+                gap: "1rem",
+                height: "100%",
+              }}
+            >
               <Extensions
                 extensions={diagnostics().extensions}
                 onLinkClick={handleLinkClick}
               />
-            </Box>
-            <Box sx={{ flexGrow: 1 }}>
               <Show when={extension()}>
                 <Extension {...extension()} />
               </Show>
@@ -183,17 +196,17 @@ function App() {
           </Box>
         </Show>
         <Show when={selectedTab() === "build"}>
-          <Box sx={{ padding: "10px" }}>
+          <Box sx={{ boxSizing: "border-box", flex: "1", overflowY: "auto" }}>
             <BuildInfo {...diagnostics().buildInfo} />
           </Box>
         </Show>
         <Show when={selectedTab() === "server"}>
-          <Box sx={{ padding: "10px" }}>
+          <Box sx={{ boxSizing: "border-box", flex: "1", overflowY: "auto" }}>
             <ServerInfo {...diagnostics().serverInfo} />
           </Box>
         </Show>
       </Show>
-    </>
+    </Box>
   );
 }
 

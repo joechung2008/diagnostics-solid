@@ -17,11 +17,16 @@ function StageDefinition(props: StageDefinitionProps) {
 
   return (
     <div>
-      <Typography class="custom-h2" variant="h2" color="text.primary">
+      <Typography
+        id="stage-definitions"
+        variant="h2"
+        color="text.primary"
+        sx={{ fontSize: "2rem" }}
+      >
         Stage Definitions
       </Typography>
       <TableContainer>
-        <Table aria-label="Stage Definitions">
+        <Table aria-labelledby="stage-definitions">
           <TableHead>
             <TableRow>
               <TableCell>Key</TableCell>

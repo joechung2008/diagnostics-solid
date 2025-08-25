@@ -14,15 +14,27 @@ function Extensions(props: ExtensionsProps) {
   );
 
   return (
-    <Box component="nav" aria-label="Extensions" class="extensions-root">
+    <Box
+      aria-label="Extensions"
+      component="nav"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "0.5rem",
+        overflowX: "hidden",
+        overflowY: "auto",
+      }}
+    >
       <For each={links()}>
         {(link) => (
           <Button
-            onClick={(e) => props.onLinkClick?.(e, link)}
-            class="extension-link"
             variant="text"
+            onClick={(e) => props.onLinkClick?.(e, link)}
+            sx={{
+              justifyContent: "flex-start",
+            }}
           >
-            <span>{link.name}</span>
+            <span class="extension-link-text">{link.name}</span>
           </Button>
         )}
       </For>

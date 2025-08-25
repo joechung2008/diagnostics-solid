@@ -14,11 +14,16 @@ function Configuration(props: ConfigurationProps) {
 
   return (
     <div>
-      <Typography class="custom-h2" variant="h2" color="text.primary">
+      <Typography
+        id="configuration"
+        variant="h2"
+        color="text.primary"
+        sx={{ fontSize: "2rem" }}
+      >
         Configuration
       </Typography>
       <TableContainer>
-        <Table aria-label="Configuration">
+        <Table aria-labelledby="configuration">
           <TableHead>
             <TableRow>
               <TableCell>Key</TableCell>

@@ -7,8 +7,16 @@ import "./styles.css";
 
 function Extension(props: ExtensionProps) {
   return (
-    <Box class="extension-root">
-      <Typography class="custom-h1" variant="h1" color="text.primary">
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        flexGrow: "1",
+        overflowY: "auto",
+        gap: "1rem",
+      }}
+    >
+      <Typography variant="h1" color="text.primary" sx={{ fontSize: "3rem" }}>
         {props.extensionName}
       </Typography>
       {props.config && <Configuration config={props.config} />}
