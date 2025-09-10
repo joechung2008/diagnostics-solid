@@ -1,6 +1,6 @@
 interface ExtensionsProps {
   extensions: Record<string, Extension>;
-  onLinkClick(ev?: React.MouseEvent, item?: KeyedNavLink);
+  onLinkClick(ev?: MouseEvent, item?: KeyedNavLink);
 }
 
 interface ExtensionInfo {
