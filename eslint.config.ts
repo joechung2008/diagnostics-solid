@@ -1,22 +1,27 @@
 import solidPlugin from "eslint-plugin-solid";
 import { globalIgnores } from "eslint/config";
-import globals from "globals";
 import tseslint from "typescript-eslint";
+import prettierConfig from "eslint-config-prettier";
+import prettierPlugin from "eslint-plugin-prettier";
 
-export default tseslint.config([
+export default [
   globalIgnores(["coverage", "dist", "src/**/*.d.ts"]),
+  ...tseslint.configs.recommended,
+  solidPlugin.configs["flat/typescript"],
+  prettierConfig,
   {
     files: ["**/*.{ts,tsx}"],
-    extends: [
-      tseslint.configs.recommended,
-      solidPlugin.configs["flat/typescript"],
-    ],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
       parserOptions: {
         tsconfigRootDir: __dirname,
       },
     },
+    plugins: {
+      prettier: prettierPlugin,
+    },
+    rules: {
+      "prettier/prettier": ["error"],
+    },
   },
-]);
+];
